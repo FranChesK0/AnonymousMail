@@ -3,8 +3,8 @@ from abc import ABC
 
 import aiohttp
 
-from models import Email, Message
 from misc import Env, LoggerName, get_logger
+from api_requests.models import Email, Message
 
 logger: logging.Logger = get_logger(LoggerName.MAIN)
 
