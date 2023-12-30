@@ -6,7 +6,6 @@ from logging import config
 from misc import Env
 
 logs_dir: str = os.path.join(Env.ROOT_DIR, "logs")
-print(logs_dir)
 if not os.path.exists(logs_dir):
     os.makedirs(logs_dir)
 
