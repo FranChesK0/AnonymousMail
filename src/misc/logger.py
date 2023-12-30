@@ -21,4 +21,4 @@ class LoggerName(str, Enum):
 def get_logger(name: LoggerName | None = None) -> logging.Logger:
     if Env.DEBUG:
         return logging.getLogger(LoggerName.DEBUG.value)
-    return logging.getLogger(name.value if name is not None else LoggerName.ROOT)
+    return logging.getLogger(name.value if name is not None else LoggerName.ROOT.value)
