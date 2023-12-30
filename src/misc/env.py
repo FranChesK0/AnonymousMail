@@ -14,3 +14,4 @@ class Env(ABC):
     ROOT_DIR: Final[str] = root_dir
     DEBUG: Final[int] = int(os.environ.get("DEBUG", "DEBUG is undefined"))
     API: Final[str] = os.environ.get("API", "API is undefined")
+    URL: Final[str] = os.environ.get("URL", "URL is undefined")
