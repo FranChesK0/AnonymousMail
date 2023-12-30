@@ -4,8 +4,10 @@ from typing import Final
 
 from dotenv import load_dotenv
 
-root_dir: str = str(os.path.dirname(os.path.abspath(__file__))).removesuffix(f"{os.path.sep}src{os.path.sep}misc")
-load_dotenv(f"{root_dir}{os.path.sep}data{os.path.sep}.env")
+root_dir: str = str(os.path.dirname(os.path.abspath(__file__))).removesuffix(os.path.join("src", "misc"))
+os.environ["ROOT_DIR"] = root_dir
+
+load_dotenv(os.path.join(root_dir, "data", ".env"))
 
 
 class Env(ABC):
